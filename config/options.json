@@ -1,0 +1,444 @@
+{
+    "defaultLocale": "en",
+    "locale": "en",
+    "camera": {
+        "fov": 60,
+        "near": 1,
+        "far": 10000,
+        "position": {
+            "x": 0,
+            "y": 100,
+            "z": 200
+        }
+    },
+    "renderer": {
+        "alpha": true,
+        "antialias": true,
+        "shadowMap": {
+            "enabled": true
+        }
+    },
+    "fog": {
+        "near": 100,
+        "far": 950
+    },
+    "lights": {
+        "ambient": {
+            "color": "#dc8874",
+            "intensity": 0.5
+        },
+        "hemisphere": {
+            "intensity": 0.9
+        },
+        "shadow": {
+            "intensity": 0.9,
+            "position": {
+                "x": 150,
+                "y": 350,
+                "z": 350
+            },
+            "castShadow": true,
+            "camera": {
+                "left": -400,
+                "right": 400,
+                "top": 400,
+                "bottom": -400,
+                "near": 1,
+                "far": 1000
+            },
+            "mapSize": {
+                "width": 2048,
+                "height": 2048
+            }
+        }
+    },
+    "game": {
+        "level": {
+            "current": 1,
+            "lastUpdate": 0
+        },
+        "speed": {
+            "current": 0,
+            "init": 0.00035,
+            "base": 0.00035,
+            "increaseByTime": 0.0000025,
+            "increaseByLevel": 0.000005,
+            "lastUpdate": 0,
+            "ratioDistance": 50,
+            "target": 0.00035
+        },
+        "distance": {
+            "current": 0,
+            "tillSpeedUpdate": 100,
+            "tillLevelUpdate": 1000
+        },
+        "baseSpeed": 0.00035,
+        "incrementSpeedByTime": 0.0000025,
+        "incrementSpeedByLevel": 0.000005,
+        "cameraSensitivity": 0.0002
+    },
+    "models": {
+        "world": {
+            "solver": {
+                "iterations": 7,
+                "tolerance": 0.1
+            },
+            "physics": {
+                "friction": 0.4,
+                "restitution": 0.3
+            },
+            "gravity": {
+                "x": 0,
+                "y": -9.8,
+                "z": 0
+            },
+            "size": {
+                "x": 600,
+                "y": 4000,
+                "z": 100
+            }
+        },
+        "air_plane": {
+            "default": {
+                "width": 75,
+                "height": 100
+            }, 
+            "position": [
+                -75,
+                100,
+                0
+            ],
+            "mass": 1,
+            "scale": 0.25,
+            "amplitude": {
+                "height": 80,
+                "width": 75,
+                "min": 0.25,
+                "max": 1.5
+            },
+            "speed": {
+                "current": 0,
+                "min": 0.25,
+                "max": 1.5,
+                "falling": 0.001,
+                "vertical": 0.05
+            },
+            "sensitivity": {
+                "move": 0.005,
+                "rotateX": 0.0008,
+                "rotateZ": 0.0004
+            },
+            "energy": {
+                "min": 0,
+                "max": 100,
+                "current": 100,
+                "cost": 3,
+                "levels": {
+                    "default": {
+                        "value": 70,
+                        "color": "blue"
+                    },
+                    "warning": {
+                        "value": 30,
+                        "color": "yellow"
+                    },
+                    "low": {
+                        "value": 0,
+                        "color": "red"
+                    }
+                },
+                "low": 30,
+                "warning": 70
+            },
+            "collision": {
+                "displacementX": 0,
+                "speedX": 0,
+                "displacementY": 0,
+                "speedY": 0
+            },
+            "components": {
+                "default": {
+                    "shape": "box",
+                    "mass": 1,
+                    "params": {
+                        "width": 10,
+                        "height": 10,
+                        "depth": 10,
+                        "widthSegments": 1,
+                        "heightSegments": 1,
+                        "depthSegments": 1
+                    },
+                    "color": "red",
+                    "transparent": false,
+                    "opacity": 1,
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "three": {
+                        "castShadow": true,
+                        "recieveShadow": true
+                    },
+                    "cannon": {
+                        "mass": 1
+                    },
+                    "parent": null
+                },
+                "bodies": {
+                    "cockpit": {
+                        "render": true,
+                        "params": {
+                            "width": 60,
+                            "height": 60,
+                            "depth": 50,
+                            "sides": 4,
+                            "sideLeft": 35,
+                            "sideRight": 25
+                        },
+                        "vertices": {
+                            "4": {
+                                "y": -5,
+                                "z": 5
+                            },
+                            "5": {
+                                "y": -5,
+                                "z": -5
+                            },
+                            "6": {
+                                "y": 5,
+                                "z": 5
+                            },
+                            "7": {
+                                "y": 5,
+                                "z": -5
+                            }
+                        }
+                    },
+                    "engine": {
+                        "render": true,
+                        "color": "white",
+                        "params": {
+                            "width": 20,
+                            "height": 50,
+                            "depth": 50
+                        },
+                        "position": {
+                            "x": 40
+                        }
+                    },
+                    "windshield": {
+                        "render": true,
+                        "transparent": true,
+                        "opacity": 0.6,
+                        "color": "white",
+                        "params": {
+                            "width": 3,
+                            "height": 15,
+                            "depth": 20
+                        },
+                        "position": {
+                            "x": 5,
+                            "y": 27,
+                            "z": 0
+                        }
+                    },
+                    "tail": {
+                        "render": true,
+                        "color": "red",
+                        "params": {
+                            "width": 15,
+                            "height": 20,
+                            "depth": 5 
+                        },
+                        "position": {
+                            "x": -40,
+                            "y": 20
+                        }
+                    },
+                    "propeller": {
+                        "render": true,
+                        "color": "brown",
+                        "params": {
+                            "width": 20,
+                            "height": 10,
+                            "depth": 10 
+                        },
+                        "position": {
+                            "x": 50,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    "wings": {
+                        "render": true,
+                        "color": "red",
+                        "params": {
+                            "width": 30,
+                            "height": 5,
+                            "depth": 120 
+                        },
+                        "position": {
+                            "x": 0,
+                            "y": 15,
+                            "z": 0
+                        }
+                    },
+                    "blade": {
+                        "render": true,
+                        "color": "brownDark",
+                        "params": {
+                            "width": 1,
+                            "height": 100,
+                            "depth": 20 
+                        },
+                        "position": {
+                            "x": 8,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "parent": "propeller"
+                    }
+                }
+            },
+            "parts": {}
+        },
+        "sky": {
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "clouds": {
+                "size": 20,
+                "count": 20
+            }
+        },
+        "sea": {
+            "radius": 600,
+            "radius_top": 600,
+            "radius_bottom": 600,
+            "height": 800,
+            "radius_segments": 40,
+            "vertical_segments": 10,
+            "opacity": 0.6,
+            "position": {
+                "x": 0,
+                "y": -600,
+                "z": 0
+            },
+            "waves": {
+                "amp": {
+                    "min": 5,
+                    "max": 20
+                },
+                "speed": {
+                    "min": 0.001,
+                    "max": 0.003
+                }
+            }
+        },
+        "objects": {
+            "default": {
+                "score": 0,
+                "count": 10,
+                "speed": 0.5,
+                "maxActive": 3,
+                "minActive": 1,
+                "angle": 0,
+                "distance": 0,
+                "angleMultiply": 0.1,
+                "spawn": {
+                    "lastTime": 0,
+                    "distanceToUpdate": 100,
+                    "after": 0,
+                    "distance": 10
+                },
+                "material": {
+                    "color": "white",
+                    "shininess": 0,
+                    "specular": "white"
+                },
+                "params": {
+                },
+                "particles": {
+                    "detail": 0,
+                    "radius": 3,
+                    "density": 5,
+                    "color": "red",
+                    "scale": 0.8,
+                    "baseSpeed": 0.6,
+                    "material": {
+                        "color": "#009999",
+                        "specular": "white",
+                        "shininess": 0
+                    },
+                    "rate": {
+                        "rotation": 12,
+                        "scale": 0.1,
+                        "position": 50,
+                        "speed": 12
+                    }
+                }
+            },
+            "types": {
+                "rock": {
+                    "score": -10,
+                    "speed": 0.6,
+                    "count": 5,
+                    "angleMultiply": 0.1,
+                    "spawn": {
+                        "lastTime": 0,
+                        "distance": 50
+                    },
+                    "params": {
+                        "radius": 8,
+                        "detail": 2
+                    },
+                    "material": {
+                        "color": "red",
+                        "shininess": 0
+                    },
+                    "particles": {
+                        "material": {
+                            "color": "red",
+                            "specular": "white",
+                            "shininess": 0
+                        }
+                    }
+                },
+                "gem": {
+                    "score": 3,
+                    "speed": 0.5,
+                    "tolerance": 15,
+                    "minActive": 1,
+                    "maxActive": 10,
+                    "count": 10,
+                    "angleMultiply": 0.02,
+                    "spawn": {
+                        "lastTime": 0,
+                        "distance": 100
+                    },
+                    "params": {
+                        "radius": 5,
+                        "detail": 0
+                    },
+                    "material": {
+                        "color": "blue",
+                        "shininess": 0
+                    },
+                    "particles": {
+                        "material": {
+                            "color": "blue",
+                            "specular": "white",
+                            "shininess": 0
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ui": {
+        "font": "LuckiestGuy"
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "ui": {
+        "score": "Резултат",
+        "best_score": "Топ Резултат",
+        "strength": "Издръжливост"
+    },
+    "pages": {
+        "settings": {
+            "title": "Настройки",
+            "tabs": {
+                "system": {
+                    "title": "Системни",
+                    "debug": "Тестване",
+                    "assetsUrl": "Адрес на Ресурите",
+                    "fps": "Кадри в секунда",
+                    "locales": "Езици",
+                    "languages": {
+                        "en": "Английски",
+                        "bg": "Български"
+                    }
+                },
+                "screen": {
+                    "autoResize": "Автоматично оразмеряване",
+                    "resolution": "Резолюция",
+                    "scale": "Мащаб",
+                    "offset": "Отстъп"
+                },
+                "engine": {
+                    "title": "Енджнин"
+                },
+                "models": {
+                    "title": "Objects",
+                    "cannon": {
+                        "name": "Оръдие"
+                    },
+                    "droplets": {
+                        "name": "Падащи предмети"
+                    },
+                    "wall": {
+                        "name": "Стена"
+                    }
+                }
+            }
+        },
+        "tutorial": {
+            "title": "Упътване"
+        },
+        "game": {
+            "title": "Игра"
+        }
+    },
+
+    "socials": {
+        "facebook": {
+            "name": "Фейсбук"
+        },
+        "instagram": {
+            "name": "Инстаграм"
+        }
+    }
+}

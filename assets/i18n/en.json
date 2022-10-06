@@ -1,0 +1,77 @@
+{
+    "ui": {
+        "score": "Score",
+        "best_score": "Best Score",
+        "strength": "Durability",
+        "distance": "Distance",
+        "level": "Level",
+        "energy": "Energy",
+        "buttons": {
+            "restart": "Restart"
+        },
+        "popups": {
+            "game_start": {
+                "header": "Shoot the Objects",
+                "play": "Play"
+            },
+            "game_over": {
+                "header": "Game Over",
+                "replay": "Play Again"
+            }
+        }
+    },
+    "pages": {
+        "settings": {
+            "title": "Settings",
+            "tabs": {
+                "system": {
+                    "title": "System",
+                    "debug": "Debug Mode",
+                    "assetsUrl": "Assets Location",
+                    "fps": "Frames Per Second",
+                    "locales": "Languages",
+                    "languages": {
+                        "en": "English",
+                        "bg": "Bulgarian"
+                    }
+                },
+                "screen": {
+                    "autoResize": "Toggle Auto Resize",
+                    "resolution": "Resolution",
+                    "scale": "Scale",
+                    "offset": "Offset"
+                },
+                "engine": {
+                    "title": "Game Engine"
+                },
+                "models": {
+                    "title": "Objects",
+                    "cannon": {
+                        "name": "Cannon"
+                    },
+                    "droplets": {
+                        "name": "Droplets"
+                    },
+                    "wall": {
+                        "name": "Name"
+                    }
+                }
+            }
+        },
+        "tutorial": {
+            "title": "Tutorial"
+        },
+        "game": {
+            "title": "Game"
+        }
+    },
+
+    "socials": {
+        "facebook": {
+            "name": "Facebook"
+        },
+        "instagram": {
+            "name": "Instagram"
+        }
+    }
+}

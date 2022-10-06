@@ -1,0 +1,13 @@
+{
+    "fonts": [
+        "LuckiestGuy.ttf"
+    ],
+    "textures": {
+        "bunny": "bunny.png"
+    },
+    "matcaps": [
+
+    ],
+    "models": [
+    ]
+}

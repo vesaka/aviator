@@ -1,0 +1,28 @@
+{
+    "style": {
+        "font": {
+            "family": "LuckiestGuy",
+            "size": 24
+        },
+        "color": "white"
+    },
+    "elements": {
+        "level": {
+            "font": {
+                "size": 32,
+                "stroke": "red"
+            },
+            "stroke": {
+                "colors": ["#ff99ff", "#882200", "#ff0000", "#aa9922"],
+                "fill": "none",
+                "width": 5,
+                "empty": "rgba(0, 0, 0, 0.4)"
+            },
+            "colors": []
+        },
+        "distance": {
+        },
+        "energy": {
+        }
+    }
+}
